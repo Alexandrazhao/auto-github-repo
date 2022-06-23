@@ -3,6 +3,6 @@ steps:
     agents:
       queue: elastic
     commands:
-      - "echo 'Hello world' "
+      - "echo 'Hello world, this is alexz' "
     timeout_in_minutes: 15
 
