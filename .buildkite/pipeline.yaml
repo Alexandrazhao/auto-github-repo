@@ -1,0 +1,8 @@
+steps:
+  - name: "alexz-demo-pipeline"
+    agents:
+      queue: elastic
+    commands:
+      - "echo 'Hello world' "
+    timeout_in_minutes: 15
+
