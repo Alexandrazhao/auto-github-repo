@@ -13,4 +13,11 @@ steps:
     agents:
       queue: elastic
 
+  - command:
+    - "scripts/auto-create-repo"
+    key: auto-create-repo
+    agents:
+      queue: elastic
+
+
 
