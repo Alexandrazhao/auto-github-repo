@@ -1,8 +1,0 @@
-#!/bin/bash
-set -euo pipefail
-
-if [[ "$BUILDKITE_PIPELINE_SLUG" == "my-app" ]]; then
-  if [[ "$BUILDKITE_STEP_KEY" == "trigger-github-deploy" ]]; then
-    export GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN="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"
-  fi
-fi
