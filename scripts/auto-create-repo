@@ -3,11 +3,16 @@ curl -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
     --data '{"name":"auto-generate-repo-new"}'\
     https://api.github.com/user/repos
 
+exists_repo(){
+    if curl -fsS "https://api.github.com/repos/$MY_REPO" >/dev/null; then
+        printf '%s\n' "The GitHub repo $MY_REPO exists." >&2
+        return 0
+    else
+        printf '%s\n' "Error: no GitHub repo $MY_REPO found." >&2
+        return 1
+    fi
+}
 
-if curl -fsS "https://api.github.com/repos/$MY_REPO" >/dev/null; then
-    printf '%s\n' "The GitHub repo $MY_REPO exists." >&2
-    return 0
-  else
-    printf '%s\n' "Error: no GitHub repo $MY_REPO found." >&2
-    return 1
+if exists_repo "ocaml/ocaml"; then
+  echo "OK"
 fi
