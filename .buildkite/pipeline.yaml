@@ -7,10 +7,8 @@ steps:
     timeout_in_minutes: 15
     
   - command:
-    - "cat README.md"
-    #- "ls"
-    #- "pwd"
-    #- "cat scripts/trigger-github-deploy"
+    - "ls"
+    - "scripts/trigger-github-deploy"
     key: trigger-github-deploy
     agents:
       queue: elastic
