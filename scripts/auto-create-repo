@@ -1,2 +1,0 @@
-#!/bin/bash
-curl -H "Authorization: token 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" --data '{"name":"auto-generate-repo"}' https://api.github.com/user/repos
