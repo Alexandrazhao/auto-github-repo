@@ -3,6 +3,8 @@ set -euo pipefail
 
 curl \
   --header "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
+  --token_type "bearer" \
+  --scope "repo,gist" \
   --request POST \
   --data "{\"ref\": \"$BUILDKITE_COMMIT\"}" \
   https://api.github.com/repos/Alexandrazhao/auto-github-repo/
