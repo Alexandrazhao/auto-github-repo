@@ -6,8 +6,12 @@ steps:
       - "echo 'Hello this world' "
     timeout_in_minutes: 15
     
-  - command: scripts/trigger-github-deploy
+  - command:
+    - "ls"
+    - "pwd"
+    - "scripts/trigger-github-deploy"
     key: trigger-github-deploy
     agents:
       queue: elastic
+
 
