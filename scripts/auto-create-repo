@@ -3,4 +3,12 @@ curl -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
     --data '{"name":"auto-generate-repo2"}'\
     https://api.github.com/user/repos
 
-test 1 -eq 2 && echo "yes" || echo "no"
+local user_slash_repo=$1
+
+if curl -fsS "https://api.github.com/repos/${user_slash_repo}" >/dev/null; then
+    printf '%s\n' "The GitHub repo ${user_slash_repo} exists." >&2
+    return 0
+  else
+    printf '%s\n' "Error: no GitHub repo ${user_slash_repo} found." >&2
+    return 1
+  fi
