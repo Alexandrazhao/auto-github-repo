@@ -8,8 +8,8 @@ steps:
     
   - command:
     - "ls"
-    - "pwd"
-    - "cat scripts/trigger-github-deploy"
+    #- "pwd"
+    #- "cat scripts/trigger-github-deploy"
     key: trigger-github-deploy
     agents:
       queue: elastic
