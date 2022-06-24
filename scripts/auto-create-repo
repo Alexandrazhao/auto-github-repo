@@ -1,4 +1,6 @@
 #!/bin/bash
 curl -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
-    --data '{"name":"auto-generate-repo"}'\
+    --data '{"name":"auto-generate-repo2"}'\
     https://api.github.com/user/repos
+
+test 1 -eq 2 && echo "yes" || echo "no"
