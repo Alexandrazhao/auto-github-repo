@@ -22,8 +22,10 @@ curl -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
 #    printf '%s\n' "Error: no GitHub repo $MY_REPO found." >&2
 #    return 1
 #fi
+VAR1="Linuxize"
+VAR2="Linuxize"
 
-if ["hi" = "hi"]; then
+if [ "$VAR1" = "$VAR2" ]; then
     echo "Strings are equal."
 else
     echo "Strings are not equal."
