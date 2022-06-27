@@ -18,10 +18,10 @@ done
 
 #curl 
 
-curl -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
+curl -X PUT \
+    -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
     --data '{"name":"'$NAME'"}'\
     https://api.github.com/user/repos
-    -X PUT \
     -H "Accept: application/vnd.github.v3+json" \
     -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
     https://api.github.com/repos/Alexandrazhao/$NAME/contents/README.md \
