@@ -19,13 +19,13 @@ steps:
       - text: "Your name"
         key: "name"
   - label: "Run script"
-    - command:
-      - "scripts/auto-create-repo"
-      key: auto-create-repo
-      agents:
-        queue: elastic
+    - command: "scripts/auto-create-repo"
 
-  
+#  - command:
+#    - "scripts/auto-create-repo"
+#    key: auto-create-repo
+#    agents:
+#      queue: elastic
   
   
 
