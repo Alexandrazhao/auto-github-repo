@@ -1,5 +1,14 @@
 #!/bin/bash
 NAME=$(buildkite-agent meta-data get name)
+
+do
+  echo "Script is checking for name"
+  NAME=$(buildkite-agent meta-data get name)
+  echo "Script run by $NAME"
+  sleep 5
+done
+
+
 curl -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
     --data '{"name":'$NAME'}'\
     https://api.github.com/user/repos
