@@ -11,7 +11,7 @@ done
 
 
 curl -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
-    --data '{"name":\`$NAME\`}'\
+    --data '{"name": '$NAME'}'\
     https://api.github.com/user/repos
 
 
