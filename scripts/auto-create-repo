@@ -25,6 +25,6 @@ exists_repo(){
     fi
 }
 
-if exists_repo "ocaml/ocaml"; then
-  echo "OK"
+if exists_repo "'$NAME'/'$NAME'"; then
+  echo "no!"
 fi
