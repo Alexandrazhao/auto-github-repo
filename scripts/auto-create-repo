@@ -14,6 +14,7 @@ if curl https://api.github.com/repos/Alexandrazhao/$NAME; then
 else
     printf '%s\n' "Error: no GitHub repo $NAME found." >&2
 fi
+sleep 20
 
 curl -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
     --data '{"name":"'$NAME'"}'\
