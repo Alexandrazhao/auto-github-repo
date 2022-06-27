@@ -9,17 +9,18 @@ do
   sleep 5
 done
 
+if curl https://api.github.com/repos/Alexandrazhao/$NAME; then
+    echo '%s\n' "The GitHub repo $NAME exists this is me." >&2
+else
+    printf '%s\n' "Error: no GitHub repo $NAME found." >&2
+fi
 
 curl -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
     --data '{"name":"'$NAME'"}'\
     https://api.github.com/user/repos
 
 
-if curl https://api.github.com/repos/Alexandrazhao/$NAME; then
-    echo '%s\n' "The GitHub repo $NAME exists this is me." >&2
-else
-    printf '%s\n' "Error: no GitHub repo $NAME found." >&2
-fi
+
 
 #if [ "$MY_REPO" = "$NAME" ]; then
 #    echo "Strings are equal."
