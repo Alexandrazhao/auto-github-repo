@@ -1,6 +1,7 @@
 #!/bin/bash
-NAME=$(buildkite-agent meta-data get name)
+NAME=""
 
+until [ ${#NAME} -gt 0 ]
 do
   echo "Script is checking for name"
   NAME=$(buildkite-agent meta-data get name)
