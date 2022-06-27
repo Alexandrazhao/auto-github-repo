@@ -22,6 +22,10 @@ steps:
     command: scripts/auto-create-repo
     agents: 
       queue: elastic
+  #- notify:
+  #  command: echo "HELLO"
+  #    if: "name" == "alexneedfood"
+
 
 #  - command:
 #    - "scripts/auto-create-repo"
