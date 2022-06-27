@@ -20,6 +20,8 @@ steps:
         key: "name"
   - label: "Run script"
     command: scripts/auto-create-repo
+    agents: 
+      queue: elastic
 
 #  - command:
 #    - "scripts/auto-create-repo"
