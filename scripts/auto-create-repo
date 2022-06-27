@@ -25,6 +25,6 @@ exists_repo(){
     fi
 }
 
-if exists_repo "'$NAME'/'$NAME'"; then
+if exists_repo "'$MY_REPO'/'$NAME'"; then
   echo "no!"
 fi
