@@ -16,9 +16,15 @@ done
 #fi
 #sleep 20
 
+curl -X PUT \
+  -H "Accept: application/vnd.github.v3+json" \
+  -H "Authorization: token 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" \
+  https://api.github.com/repos/Alexandrazhao/alexneedfood/contents/text.txt \
+  -d '{"message":"my commit message","committer":{"name":"Alex","email":"alexneedfood@gmail.com"},"content":"bXkgbmV3IGZpbGUgY29udGVudHM="}'
+
 curl -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
     --data '{"name":"'$NAME'"}'\
-    https://api.github.com/user/repos/text.txt
+    https://api.github.com/user/repos
 
 
 
