@@ -13,18 +13,21 @@ steps:
     agents:
       queue: elastic
 
+
+  - input: "what is the name of your repo?"
+    fields:
+      - text: "Your name"
+        key: "name"
+  - label: "Run script"
+    command: "scripts/auto-create-repo"
+
   - command:
     - "scripts/auto-create-repo"
     key: auto-create-repo
     agents:
       queue: elastic
   
-  - input: "Who is running this script?"
-    fields:
-      - text: "Your name"
-        key: "name"
-  - label: "Run script"
-    command: "scripts/auto-create-repo"
+  
 
 
 
