@@ -14,12 +14,12 @@ steps:
       queue: elastic
 
 
-  - input: "what is the name of your repo?"
+  - input: "Name your repo"
     fields:
       - text: "Your name"
         key: "name"
   - label: "Run script"
-    - command: "scripts/auto-create-repo"
+    command: scripts/auto-create-repo
 
 #  - command:
 #    - "scripts/auto-create-repo"
