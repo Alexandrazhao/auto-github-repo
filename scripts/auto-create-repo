@@ -23,7 +23,7 @@ curl -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
 #    return 1
 #fi
 
-if ["$MY_REPO" == "$NAME"]; then
+if ["hi" == "hi"]; then
     echo "Strings are equal."
 else
     echo "Strings are not equal."
