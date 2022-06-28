@@ -1,0 +1,39 @@
+#!/bin/bash
+
+ARGS=$(xargs echo  $(perl -anle 's/^[^:]+//g && s/:\s+//g && print' email.conf) < /dev/null)
+set -- $ARGS "$@";  
+
+declare -A email;
+email['user']=$1
+email['pass']=$2
+email['smtp']=$3
+email['port']='587';
+email['rcpt']='alexneedfood@gmail.com';
+
+
+email_content='From: "The title" <'"$"'>
+To: "Gmail" <'"$"'>
+Subject: from '"$"' to Gmail
+Date: '"$(date)"'
+
+Hi Gmail,
+'"$"' is sending email to you and it should work.
+Regards
+';
+
+
+echo "$email_content" | curl -s \
+    --url "smtp://$:$" \
+    --user "$:$" \
+    --mail-from "$" \
+    --mail-rcpt "$" \
+    --upload-file - # email.txt
+
+
+if [[ $? == 0 ]]; then
+    echo;
+    echo 'okay';
+else
+    echo "curl error code $?";
+    man curl | grep "^ \+$? \+"
+fi
