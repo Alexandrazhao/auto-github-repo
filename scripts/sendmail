@@ -4,9 +4,9 @@ ARGS=$(xargs echo  $(perl -anle 's/^[^:]+//g && s/:\s+//g && print' email.conf) 
 set -- $ARGS "$@";  
 
 declare -A email;
-email['user']=$1
+email['user']='alexandra.zhao@joinhandshake.com'
 email['pass']=$2
-email['smtp']=$3
+email['smtp']='smtps://smtp.gmail.com'
 email['port']='587';
 email['rcpt']='alexneedfood@gmail.com';
 
