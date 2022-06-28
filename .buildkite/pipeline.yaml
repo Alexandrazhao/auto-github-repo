@@ -23,7 +23,7 @@ steps:
     agents: 
       queue: elastic
 
-notify: "start to build"
+notify:
   - email: "alexneedfood@gmail.com"
       #if: build.state == "passed"
   #  command: echo "HELLO"
