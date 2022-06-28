@@ -26,6 +26,7 @@ steps:
 notify:
   - email: "alexneedfood@gmail.com"
     if: build.state == "passed"
+    echo: "Hello"
   #  command: echo "HELLO"
   #    if: "name" == "alexneedfood"
 
