@@ -25,7 +25,8 @@ steps:
 
 notify:
   - email: "alexneedfood@gmail.com"
-      #if: build.state == "passed"
+    message: "your repo's url is "
+    if: build.state == "passed"
   #  command: echo "HELLO"
   #    if: "name" == "alexneedfood"
 
