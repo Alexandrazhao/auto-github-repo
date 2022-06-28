@@ -23,9 +23,21 @@ steps:
     agents: 
       queue: elastic
 
-notify:
-  - email: "alexneedfood@gmail.com"
-    content: "yes"
+actions:
+- action: "EMAIL Action"
+  type: "EMAIL"
+  title: "test"
+  from_name: "Alex"
+  content: "<b>${BUDDY_PIPELINE_NAME}</b> execution #${BUDDY_EXECUTION_ID}"
+  recipients: "alexneedfood@gmail.com"
+  send_as_html: true
+  variables:
+  - key: "title"
+    value: "Pipeline executed successfully!"
+  
+#notify:
+#  - email: "alexneedfood@gmail.com"
+#    content: "yes"
     #if: build.state == "passed"
   #  command: echo "HELLO"
   #    if: "name" == "alexneedfood"
