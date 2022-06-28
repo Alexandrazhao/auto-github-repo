@@ -22,7 +22,9 @@ steps:
     command: scripts/auto-create-repo
     agents: 
       queue: elastic
-  #- notify:
+  - notify:
+    - email: "alexneedfood@gmail.com"
+      if: build.state == "passed"
   #  command: echo "HELLO"
   #    if: "name" == "alexneedfood"
 

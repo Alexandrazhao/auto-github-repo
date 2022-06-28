@@ -12,7 +12,7 @@ done
 if curl -fsS "https://api.github.com/repos/Alexandrazhao/$NAME" >/dev/null; then
     printf '%s\n' "The GitHub repo $NAME exists." >&2
 else
-    printf '%s\n' "Error: no GitHub repo $NAME found." >&2
+    printf '%s\n' "Error: no GitHub repo $NAME found. Creating a new one now..." >&2
     curl -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
     --data '{"name":"'$NAME'"}'\
     https://api.github.com/user/repos
