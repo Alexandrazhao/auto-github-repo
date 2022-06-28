@@ -16,6 +16,12 @@ else
     curl -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
     --data '{"name":"'$NAME'"}'\
     https://api.github.com/user/repos
+    curl -X PUT \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
+        https://api.github.com/repos/Alexandrazhao/$NAME/contents/readme \
+        https://api.github.com/repos/Alexandrazhao/$NAME/contents/test.txt \
+        -d '{"message":"my commit message","committer":{"name":"Alex","email":"alexneedfood@gmail.com"},"content":"VGhpcyBpcyBhIGF1dG9tYWljYWxseSBnZW5lcmF0ZWQgZG9jdW1lbnQuIA=="}'
 fi
 #sleep 20
 
