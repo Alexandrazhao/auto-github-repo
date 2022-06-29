@@ -3,8 +3,7 @@
 ARGS=$(xargs echo  $(perl -anle 's/^[^:]+//g && s/:\s+//g && print' email.conf) < /dev/null)
 set -- $ARGS "$@";  
 
-declare -A email;
-email['user']='alexandra.zhao@joinhandshake.com'
+email['user']=$1
 email['pass']=$2
 email['smtp']='smtps://smtp.gmail.com'
 email['port']='587';

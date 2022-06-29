@@ -23,11 +23,11 @@ steps:
     agents: 
       queue: elastic
 
-  - command:
-    - "scripts/sendmail"
-    key: sendmail
-    agents:
-      queue: elastic
+  #- command:
+  #  - "scripts/sendmail"
+  #  key: sendmail
+  #  agents:
+  #    queue: elastic
 
   
 #notify:
