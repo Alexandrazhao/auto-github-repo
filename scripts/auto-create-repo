@@ -23,6 +23,7 @@ else
         https://api.github.com/repos/Alexandrazhao/$NAME/contents/readme \
         https://api.github.com/repos/Alexandrazhao/$NAME/contents/test.txt \
         -d '{"message":"my commit message","committer":{"name":"Alex","email":"alexneedfood@gmail.com"},"content":"VGhpcyBpcyBhIGF1dG9tYWljYWxseSBnZW5lcmF0ZWQgZG9jdW1lbnQuIA=="}'
+        -o "file_#3.txt"
 fi
 #sleep 20
 
