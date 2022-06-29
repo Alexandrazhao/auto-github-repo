@@ -25,26 +25,14 @@ else
         -d '{"message":"my commit message","committer":{"name":"Alex","email":"alexneedfood@gmail.com"},"content":"VGhpcyBpcyBhIGF1dG9tYWljYWxseSBnZW5lcmF0ZWQgZG9jdW1lbnQuIA=="}'
 fi
 
-curl "https://api.github.com/repos/Alexandrazhao/$NAME"
-    echo "repo exist!"
+curl -X PUT \
+        -H "Accept: application/vnd.github.v3+json" \
+        -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
+        #https://api.github.com/repos/Alexandrazhao/$NAME/contents/readme -o "file_#4.txt"\
+        https://api.github.com/repos/Alexandrazhao/$NAME/contents/test.txt \
+        -d '{"message":"my commit message","committer":{"name":"Alex","email":"alexneedfood@gmail.com"},"content":"YW5vdGhlciBmaWxl"}'
 
-if [ $? -eq 0 ]; then
-    cd $NAME
-    git status
-    git remote set-url origin https://github.com/Alexandrazhao/build.git
-    if [ "$(git status --porcelain)" ]; then
-        echo "There are uncommited and unstatged files. Commit them before pushing"
-        echo "Enter commit message"
-        git add plus.py
-        git commit -m "I am doing a test right now"
-        git push
-        echo "Files pushed to GitHub"
-        # else push all commited and staged files to remote repo
-    else
-        git push
-        echo "Files pushed to GitHub"
-    fi
-fi
+
 
 
 
