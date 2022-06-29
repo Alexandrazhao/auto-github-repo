@@ -30,10 +30,9 @@ steps:
   #    queue: elastic
 
   
-#notify:
-#  - email: "alexneedfood@gmail.com"
-#    content: "yes"
-    #if: build.state == "passed"
+notify:
+  - email: "alexneedfood@gmail.com"
+    if: build.state == "passed"
   #  command: echo "HELLO"
   #    if: "name" == "alexneedfood"
 
