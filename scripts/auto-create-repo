@@ -22,7 +22,6 @@ else
         -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
         https://api.github.com/repos/Alexandrazhao/$NAME/contents/readme -o "file_#4.txt"\
         https://api.github.com/repos/Alexandrazhao/$NAME/contents/test.txt -o "file_#3.txt" \
-        https://api.github.com/repos/Alexandrazhao/$NAME/contents/plus.py -o "file_#5.txt" \
         -d '{"message":"my commit message","committer":{"name":"Alex","email":"alexneedfood@gmail.com"},"content":"VGhpcyBpcyBhIGF1dG9tYWljYWxseSBnZW5lcmF0ZWQgZG9jdW1lbnQuIA=="}'
 fi
 #sleep 20
