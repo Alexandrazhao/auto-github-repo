@@ -27,7 +27,7 @@ else
         -H "Accept: application/vnd.github.v3+json" \
         -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
         https://api.github.com/repos/Alexandrazhao/$NAME/contents/readme1 -o "file_#5.txt"  \
-        https://api.github.com/repos/Alexandrazhao/$NAME/contents/test1.txt -o "file_#6.txt"  \
+        https://api.github.com/repos/Alexandrazhao/$NAME/contents/manage.py -o "file_#6.txt"  \
         -d '{"message":"my commit message","committer":{"name":"Alex","email":"alexneedfood@gmail.com"},"content":"IyEvdXNyL2Jpbi9lbnYgcHl0aG9uCiIiIkRqYW5nbydzIGNvbW1hbmQtbGluZSB1dGlsaXR5IGZvciBhZG1pbmlzdHJhdGl2ZSB0YXNrcy4iIiIKaW1wb3J0IG9zCmltcG9ydCBzeXMKCgpkZWYgbWFpbigpOgogICAgb3MuZW52aXJvbi5zZXRkZWZhdWx0KCdESkFOR09fU0VUVElOR1NfTU9EVUxFJywgJ0xpYnJhcnkuc2V0dGluZ3MnKQogICAgdHJ5OgogICAgICAgIGZyb20gZGphbmdvLmNvcmUubWFuYWdlbWVudCBpbXBvcnQgZXhlY3V0ZV9mcm9tX2NvbW1hbmRfbGluZQogICAgZXhjZXB0IEltcG9ydEVycm9yIGFzIGV4YzoKICAgICAgICByYWlzZSBJbXBvcnRFcnJvcigKICAgICAgICAgICAgIkNvdWxkbid0IGltcG9ydCBEamFuZ28uIEFyZSB5b3Ugc3VyZSBpdCdzIGluc3RhbGxlZCBhbmQgIgogICAgICAgICAgICAiYXZhaWxhYmxlIG9uIHlvdXIgUFlUSE9OUEFUSCBlbnZpcm9ubWVudCB2YXJpYWJsZT8gRGlkIHlvdSAiCiAgICAgICAgICAgICJmb3JnZXQgdG8gYWN0aXZhdGUgYSB2aXJ0dWFsIGVudmlyb25tZW50PyIKICAgICAgICApIGZyb20gZXhjCiAgICBleGVjdXRlX2Zyb21fY29tbWFuZF9saW5lKHN5cy5hcmd2KQoKCmlmIF9fbmFtZV9fID09ICdfX21haW5fXyc6CiAgICBtYWluKCk="}'
         #-d '{"message":"my commit message","committer":{"name":"Alex","email":"alexneedfood@gmail.com"},"content":"YW5vdGhlciBmaWxl"}'
 fi
