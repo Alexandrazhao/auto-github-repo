@@ -16,19 +16,26 @@ else
     printf '%s\n' "Error: no GitHub repo $NAME found. Creating a new one now..." >&2
     curl -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
     --data '{"name":"'$NAME'"}'\
-    https://api.github.com/user/repos -o "file_#2.txt"\
+    https://api.github.com/user/repos -o "file_#1.txt"
     curl -X PUT \
         -H "Accept: application/vnd.github.v3+json" \
         -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
-        https://api.github.com/repos/Alexandrazhao/$NAME/contents/readme -o "file_#4.txt"\
-        https://api.github.com/repos/Alexandrazhao/$NAME/contents/test.txt -o "file_#3.txt" \
+        https://api.github.com/repos/Alexandrazhao/$NAME/contents/readme \
+        https://api.github.com/repos/Alexandrazhao/$NAME/contents/test.txt \
         -d '{"message":"my commit message","committer":{"name":"Alex","email":"alexneedfood@gmail.com"},"content":"VGhpcyBpcyBhIGF1dG9tYWljYWxseSBnZW5lcmF0ZWQgZG9jdW1lbnQuIA=="}'
 fi
+#sleep 20
 
+#curl -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
+#    --data '{"name":"'$NAME'"}'\
+#    https://api.github.com/user/repos
 
-
-
-
+#curl -X PUT \
+#  -H "Accept: application/vnd.github.v3+json" \
+#  -H "Authorization: token $GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN" \
+#  https://api.github.com/repos/Alexandrazhao/$NAME/contents/readme \
+#  https://api.github.com/repos/Alexandrazhao/$NAME/contents/test.txt \
+#  -d '{"message":"my commit message","committer":{"name":"Alex","email":"alexneedfood@gmail.com"},"content":"VGhpcyBpcyBhIGF1dG9tYWljYWxseSBnZW5lcmF0ZWQgZG9jdW1lbnQuIA=="}'
 
 
 
