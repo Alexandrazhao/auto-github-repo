@@ -25,7 +25,7 @@ else
         -d '{"message":"my commit message","committer":{"name":"Alex","email":"alexneedfood@gmail.com"},"content":"VGhpcyBpcyBhIGF1dG9tYWljYWxseSBnZW5lcmF0ZWQgZG9jdW1lbnQuIA=="}'
 fi
 
-curl "https://api.github.com/repos/Alexandrazhao/$NAME"; then
+curl "https://api.github.com/repos/Alexandrazhao/$NAME"
     echo "repo exist!"
 
 if [ $? -eq 0 ]; then
