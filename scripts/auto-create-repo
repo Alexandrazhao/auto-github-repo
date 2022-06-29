@@ -29,7 +29,7 @@ if curl "https://api.github.com/repos/Alexandrazhao/$NAME"; then
     echo "repo exist!"
 fi
 
-if [$? -eq 0 ]; then
+if [ $? -eq 0 ]; then
     cd $NAME
     git status
     git remote set-url origin https://$GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN@github.com/Alexandrazhao/$NAME.git
