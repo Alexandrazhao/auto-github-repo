@@ -25,7 +25,7 @@ else
         https://api.github.com/repos/Alexandrazhao/$NAME/contents/readme -o "file_#4.txt"\
         -d '{"message":"my commit message","committer":{"name":"Alex","email":"alexneedfood@gmail.com"},"content":"VGhpcyBpcyBhIHJlYWRtZSBmaWxl"}'\
         https://api.github.com/repos/Alexandrazhao/$NAME/contents/test.txt -o "file_#3.txt" \
-        -d '{"message":"my commit message","committer":{"name":"Alex","email":"alexneedfood@gmail.com"},"content":"R3Vlc3Mgd2hhdCBJIGFtIGRvaW5nIGhlcmUg"}'\    
+        -d '{"message":"my commit message","committer":{"name":"Alex","email":"alexneedfood@gmail.com"},"content":"R3Vlc3Mgd2hhdCBJIGFtIGRvaW5nIGhlcmUg"}'
 fi
 #sleep 20
 
