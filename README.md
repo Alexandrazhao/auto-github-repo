@@ -9,7 +9,7 @@ This pipeline provides an easiler way to create github repos with some file temp
 
 ## How does this work
 1. Add a new pipeline to Buildkite, link this auto-github-repo to your new created pipeline. 
-2. Save your Github access token as environment variables (This is not a safe way to though). eg: ```GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN=my_github_token```
+2. Save your Github access token as environment variables (This is not a safe way though). eg: ```GITHUB_MY_APP_DEPLOYMENT_ACCESS_TOKEN=my_github_token```
 3. Set ```MY_REPO=NAME``` in environment variables.
 4. Set ```buildkite-agent pipeline upload .buildkite/pipeline.yaml``` in Commands to run, ```queue=lightweight``` as Agent Targeting Rules, then save the steps. 
 
