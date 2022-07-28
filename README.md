@@ -14,4 +14,4 @@ This pipeline provides an easiler way to create github repos with some file temp
 4. Set ```buildkite-agent pipeline upload .buildkite/pipeline.yaml``` in Commands to run, ```queue=lightweight``` as Agent Targeting Rules, then save the steps. 
 
 ## Build your pipeline!
-1. Click ```New Build```, type any message you like, then click ```Create Build```. Buildkite will ask you to ```Name Your Repo```, enter the repo name you like, make sure you don't use repeated name because it is not allowed to create the same name repo in github. After the build is done, buildkite will send you an email to inform you. Then your newly repo will appear in your Github! 
+1. Click ```New Build```, type any message you like, then click ```Create Build```. Buildkite will ask you to ```Name Your Repo```, enter the repo name you like, make sure you don't use repeated name because it is not allowed to create the same repo in github. After the build is done, buildkite will send you an email to inform you. Then your newly repo will appear in your Github! 
